@@ -1,4 +1,4 @@
-const books=[{
+const BOOKS=[{
     "id": "1" ,
     "title": "One Hundred Years of Solitude" ,
     "author": "Gabriel Garcia Marquez",
@@ -47,3 +47,6 @@ const books=[{
     "genre": "Magic Realism",
 }
 ]
+
+
+export default BOOKS;
