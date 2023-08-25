@@ -13,7 +13,7 @@ const __dirname = path.resolve();
 const PORT = process.env.PORT || 2023;
 
 
-app.use(express.static(path.join(__dirname,)));
+app.use(express.static(path.join(__dirname)));
 
 app.get('/books', (req, res) => {
     res.json(BOOKS);
