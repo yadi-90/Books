@@ -17,6 +17,7 @@ app.use(express.static(path.join(__dirname)));
 
 app.get('/books', (req, res) => {
     res.json(BOOKS);
+    res.sendFile(path.join(__dirname, 'books.html',))
 });
 
 
