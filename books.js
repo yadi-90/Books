@@ -5,6 +5,7 @@ const BOOKS =[
     "author": "Gabriel Garcia Marquez",
     "publish_date": "May 1, 1967",
     "genre":"Magic Realism" ,
+    "image": "images/0.jpg",
 },
 {
     "id": "1" ,
