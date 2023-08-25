@@ -1,13 +1,13 @@
+// index.js
 import express from "express";
 import cors from "cors";
 import 'dotenv/config';
 import path from 'path';
-import BOOKS from '/books.js';
+import BOOKS from "./books.js"; 
 
 const app = express();
 
 app.use(cors());
-
 
 const __dirname = path.resolve();
 
@@ -22,7 +22,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-
-
     console.log(`This app is listening to port ${PORT} `);
 });
