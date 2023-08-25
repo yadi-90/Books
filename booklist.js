@@ -1,5 +1,5 @@
 
-import BOOKS from "./books";
+import BOOKS from "./books.js";
 
 const bookList = document.getElementById("bookList");
 
