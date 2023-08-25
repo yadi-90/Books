@@ -17,6 +17,9 @@ app.use(express.static(path.join(__dirname)));
 app.get('/books', (req, res) => {
   res.sendFile(path.join(__dirname, 'books.html'));
 });
+app.get('/api/books', (req, res) => {
+    res.sendFile(path.join(__dirname, 'books.js'));
+    });
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
