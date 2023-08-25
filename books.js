@@ -1,10 +1,12 @@
-const BOOKS =[{
+const BOOKS =[
+    {
     "id": "1" ,
     "title": "One Hundred Years of Solitude" ,
     "author": "Gabriel Garcia Marquez",
     "publish_date": "May 1, 1967",
     "genre":"Magic Realism" ,
-},{
+},
+{
     "id": "2" ,
     "title":  "Midnight's Children's",
     "author": "Salman Rushdie",

@@ -19,6 +19,7 @@ app.get('/books', (req, res) => {
     res.json(BOOKS);
 });
 
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
@@ -27,3 +28,13 @@ app.listen(PORT, () => {
     console.log(`This app is listening to port ${PORT}`);
 });
 
+app.get('/api/books/:id', (req, res) => {
+    const bookId = req.params.id;
+    const book = BOOKS.find(book => book.id === bookId);
+
+    if (book) {
+        res.json(book);
+    } else {
+        res.status(404).json({ message: 'Book not found' });
+    }
+});
