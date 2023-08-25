@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import 'dotenv/config';
 import path from 'path';
+import BOOKS from "/books";
 
 const app = express();
 
@@ -11,6 +12,10 @@ app.use(cors());
 const __dirname = path.resolve();
 
 const PORT = process.env.PORT || 2023;
+
+app.get('/books', (req, res) => {
+    res.json(BOOKS);
+});
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
