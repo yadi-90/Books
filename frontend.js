@@ -1,3 +1,5 @@
+
+
 const bookList = document.getElementById("bookList");
 
 // Fetch books data from the backend API
@@ -14,3 +16,5 @@ fetch("/api/books")
   .catch(error => {
     console.error("Error fetching books:", error);
   });
+
+  export default bookList;
