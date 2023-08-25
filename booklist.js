@@ -1,7 +1,5 @@
-import { BOOKS } from "./books.js";
 import BOOKS from "./books.js";
-import "./bookstyle.css";
-import "./books.html";
+
 
 const bookList = document.getElementById("bookList");
 
@@ -28,4 +26,3 @@ BOOKS.forEach(book => {
 
     bookList.appendChild(bookContainer);
 });
-export default bookList;
