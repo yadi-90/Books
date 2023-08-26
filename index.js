@@ -15,14 +15,16 @@ const PORT = process.env.PORT || 2023;
 app.use(express.static(path.join(__dirname)));
 
 app.get('/books', (req, res) => {
-  res.sendFile(path.join(__dirname, 'books.html'));
+  res.sendFile(path.join(__dirname + 'books.html'));
 });
 app.get('/api/books', (req, res) => {
-    res.sendFile(path.join(__dirname, 'books.js'));
+    res.sendFile(path.join(__dirname + 'books.js'));
     });
 
+    
+
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname + 'index.html'));
 });
 
 app.get('/api/books/:id', (req, res) => {
