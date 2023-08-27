@@ -49,3 +49,7 @@ header {
 .book-details {
     flex: 1;
 }
+
+.Title{
+    color:orange;
+}
