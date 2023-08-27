@@ -1,0 +1,39 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: rgb(193, 54, 174);
+    text-align: center;
+    padding: 1rem;
+}
+
+
+.NavBar {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.NavBar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.NavBar li {
+    display: inline;
+    margin-right: 1rem;
+}
+.centerImg{
+   float:right;
+    width: 30%;
+    height: 30%;
+    margin-right: 15%;
+}
