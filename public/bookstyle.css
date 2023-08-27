@@ -53,3 +53,7 @@ header {
 .Title{
     color:orange;
 }
+.TitleBooks{
+    color:orange;
+    text-transform: capitalize;
+}
