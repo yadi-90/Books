@@ -12,19 +12,17 @@ const __dirname = path.resolve();
 
 const PORT = process.env.PORT || 2023;
 
-app.use(express.static(path.join(__dirname, 'public','public2'))); 
+app.use(express.static("public"));
 
 app.get('/books',function(req, res){
-  res.sendFile(path.join(__dirname,
-    'public', 'public2', 'books.html')); 
-});
+  res.sendFile('books.html');
 
 app.get('/api/books', (req, res) => {
     res.json(BOOKS);
 });
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'public2', 'index.html')); 
+  res.sendFile('/index.html' );
 });
 
 app.get('/api/books/:id', (req, res) => {
