@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import 'dotenv/config';
 import path from 'path';
-import BOOKS from "./books.js"; 
+import BOOKS from './books.js'; 
 
 const app = express();
 
@@ -12,24 +12,24 @@ const __dirname = path.resolve();
 
 const PORT = process.env.PORT || 2023;
 
-app.use(express.static(path.join(__dirname)));
+app.use(express.static(path.join(__dirname, 'public','public2'))); 
 
-app.get('/books', (req, res) => {
-  res.sendFile(path.join(__dirname + 'books.html'));
+app.get('/books',function(req, res){
+  res.sendFile(path.join(__dirname,
+    'public', 'public2', 'books.html')); 
 });
-app.get('/api/books', (req, res) => {
-    res.sendFile(path.join(__dirname + 'books.js'));
-    });
 
-    
+app.get('/api/books', (req, res) => {
+    res.json(BOOKS);
+});
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname + 'index.html'));
+  res.sendFile(path.join(__dirname, 'public', 'public2', 'index.html')); 
 });
 
 app.get('/api/books/:id', (req, res) => {
   const bookId = req.params.id;
-  const book = BOOKS.find(book => book.id === bookId);
+  const book = BOOKS.find(book => book.id == bookId); 
 
   if (book) {
     res.json(book);
