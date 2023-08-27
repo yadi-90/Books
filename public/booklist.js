@@ -11,7 +11,7 @@ fetch("/api/books")
       bookContainer.classList.add("book");
 
       const bookImage = document.createElement("img");
-      bookImage.src = "images/" + book.id + ".jpg";
+      bookImage.src = '${book.image}`';
       bookImage.alt = book.title;
       bookImage.classList.add("book-image");
 
